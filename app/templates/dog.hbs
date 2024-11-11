@@ -1,0 +1,13 @@
+{{page-title "Dog"}}
+<h1>Hola peritos!!!</h1>
+<LinkTo @route="dog">NEW DOGGIES PLEASE!!!</LinkTo>
+<ul>
+    {{#each @model as |dogObj|}}
+    <li>
+        <span>{{dogObj.name}}</span>
+        <img src="{{dogObj.imageUrl}}" alt="no dog for u">
+    </li>
+    {{/each}}
+</ul>
+
+{{outlet}} {{!-- for rendering a child route i.e dog/1 .... will load dog with id in place of the outlet component--}} 
